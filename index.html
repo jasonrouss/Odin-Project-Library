@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="title">L I B R A R Y</div>
+    <button id="btnBook" class="add-book">+Add New Book</button>
+    <div id="MyModal" class="modal">
+      <form id="book-form">
+        <div class="modal-content">
+          <a
+            class="close"
+            onclick="document.querySelector('#MyModal').style.display='none'"
+            >X</a
+          >
+
+          <div>
+            <h3 class="desc">Name:</h3>
+            <input autocomplete="off" id="name" class="input" type="text" />
+          </div>
+          <div>
+            <h3 class="desc">Author:</h3>
+            <input autocomplete="off" id="author" class="input" type="text" />
+          </div>
+          <div>
+            <h3 class="desc">Pages:</h3>
+            <input autocomplete="off" id="pages" class="input" type="text" />
+          </div>
+          <div>
+            <h3 class="desc">Have you read the book?(yes/no)</h3>
+            <input autocomplete="off" id="read" class="input" type="text" />
+          </div>
+          <div>
+            <h3 class="desc">ID:</h3>
+            <input autocomplete="off" id="idBook" class="input" type="text" />
+          </div>
+
+          <br />
+          <button
+            onclick="document.querySelector('#MyModal').style.display='none'"
+            id="submit"
+          >
+            Confirm
+          </button>
+        </div>
+      </form>
+    </div>
+    <table class="table-book">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Read</th>
+          <th>ID</th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+
+    <!-- js script -->
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
